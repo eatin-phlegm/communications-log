@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <center>
+      <SplitPane dividerPositions="0.5" prefHeight="1182.0" prefWidth="920.0">
+         <items>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab fx:id="mondayTab" text="Monday">
+                     <content>
+                        <Accordion>
+                           <panes>
+                              <TitledPane animated="false" text="Common Log">
+                                 <content>
+                                    <TextArea fx:id="commonLogMonday" prefHeight="318.0" prefWidth="296.0" />
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="Stock Log">
+                                 <content>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="1055.0" prefWidth="412.0">
+                                             <children>
+                                                <Label text="Low" />
+                                                <ListView fx:id="mondayLowStockList" prefHeight="1071.0" prefWidth="217.0" />
+                                                <MenuButton fx:id="mondayLowStockButton" mnemonicParsing="false" text="Add item" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="20.0" layoutY="20.0" prefHeight="1055.0" prefWidth="413.0">
+                                             <children>
+                                                <Label text="Out" />
+                                                <ListView fx:id="mondayOutStockList" prefHeight="1054.0" prefWidth="218.0" />
+                                                <MenuButton fx:id="mondayOutStockButton" mnemonicParsing="false" text="Add item" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="Who Read This Today">
+                                 <content>
+                                    <TextArea fx:id="wrttMonday" prefHeight="200.0" prefWidth="200.0" />
+                                 </content>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tuesdayTab" text="Tuesday">
+                     <content>
+                        <Accordion>
+                           <panes>
+                              <TitledPane animated="false" text="Common Log">
+                                 <content>
+                                    <TextArea fx:id="commonLogTuesday" prefHeight="318.0" prefWidth="296.0" />
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="Stock Log">
+                                 <content>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="1055.0" prefWidth="412.0">
+                                             <children>
+                                                <Label text="Low" />
+                                                <ListView fx:id="tuesdayLowStockList" prefHeight="1071.0" prefWidth="217.0" />
+                                                <MenuButton fx:id="tuesdayLowStockButton" mnemonicParsing="false" text="Add item" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="20.0" layoutY="20.0" prefHeight="1055.0" prefWidth="413.0">
+                                             <children>
+                                                <Label text="Out" />
+                                                <ListView fx:id="tuesdayOutStockList" prefHeight="1054.0" prefWidth="218.0" />
+                                                <MenuButton fx:id="tuesdayOutStockButton" mnemonicParsing="false" text="Add item" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="Who Read This Today">
+                                 <content>
+                                    <TextArea fx:id="wrttTuesday" prefHeight="200.0" prefWidth="200.0" />
+                                 </content>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="wednesdayTab" text="Wednesday">
+                     <content>
+                        <Accordion>
+                           <panes>
+                              <TitledPane animated="false" text="Common Log">
+                                 <content>
+                                    <TextArea fx:id="commonLogWednesday" prefHeight="318.0" prefWidth="296.0" />
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="Stock Log">
+                                 <content>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="1055.0" prefWidth="412.0">
+                                             <children>
+                                                <Label text="Low" />
+                                                <ListView fx:id="wednesdayLowStockList" prefHeight="1071.0" prefWidth="217.0" />
+                                                <MenuButton fx:id="wednesdayLowStockButton" mnemonicParsing="false" text="Add item" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="20.0" layoutY="20.0" prefHeight="1055.0" prefWidth="413.0">
+                                             <children>
+                                                <Label text="Out" />
+                                                <ListView fx:id="wednesdayOutStockList" prefHeight="1054.0" prefWidth="218.0" />
+                                                <MenuButton fx:id="wednesdayOutStockButton" mnemonicParsing="false" text="Add item" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="Who Read This Today">
+                                 <content>
+                                    <TextArea fx:id="wrttWednesday" prefHeight="200.0" prefWidth="200.0" />
+                                 </content>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="thursdayTab" text="Thursday">
+                     <content>
+                        <Accordion>
+                           <panes>
+                              <TitledPane animated="false" text="Common Log">
+                                 <content>
+                                    <TextArea fx:id="commonLogThursday" prefHeight="318.0" prefWidth="296.0" />
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="Stock Log">
+                                 <content>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="1055.0" prefWidth="412.0">
+                                             <children>
+                                                <Label text="Low" />
+                                                <ListView fx:id="thursdayLowStockList" prefHeight="1071.0" prefWidth="217.0" />
+                                                <MenuButton fx:id="thursdayLowStockButton" mnemonicParsing="false" text="Add item" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="20.0" layoutY="20.0" prefHeight="1055.0" prefWidth="413.0">
+                                             <children>
+                                                <Label text="Out" />
+                                                <ListView fx:id="thursdayOutStockList" prefHeight="1054.0" prefWidth="218.0" />
+                                                <MenuButton fx:id="thursdayOutStockButton" mnemonicParsing="false" text="Add item" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="Who Read This Today">
+                                 <content>
+                                    <TextArea fx:id="wrttThursday" prefHeight="200.0" prefWidth="200.0" />
+                                 </content>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="fridayTab" text="Friday">
+                     <content>
+                        <Accordion>
+                           <panes>
+                              <TitledPane animated="false" text="Common Log">
+                                 <content>
+                                    <TextArea fx:id="commonLogFriday" prefHeight="318.0" prefWidth="296.0" />
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="Stock Log">
+                                 <content>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="1055.0" prefWidth="412.0">
+                                             <children>
+                                                <Label text="Low" />
+                                                <ListView fx:id="fridayLowStockList" prefHeight="1071.0" prefWidth="217.0" />
+                                                <MenuButton fx:id="fridayLowStockButton" mnemonicParsing="false" text="Add item" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="20.0" layoutY="20.0" prefHeight="1055.0" prefWidth="413.0">
+                                             <children>
+                                                <Label text="Out" />
+                                                <ListView fx:id="fridayOutStockList" prefHeight="1054.0" prefWidth="218.0" />
+                                                <MenuButton fx:id="fridayOutStockButton" mnemonicParsing="false" text="Add item" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="Who Read This Today">
+                                 <content>
+                                    <TextArea fx:id="wrttFriday" prefHeight="200.0" prefWidth="200.0" />
+                                 </content>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="saturdayTab" text="Saturday">
+                     <content>
+                        <Accordion>
+                           <panes>
+                              <TitledPane animated="false" text="Common Log">
+                                 <content>
+                                    <TextArea fx:id="commonLogSaturday" prefHeight="318.0" prefWidth="296.0" />
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="Stock Log">
+                                 <content>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="1055.0" prefWidth="412.0">
+                                             <children>
+                                                <Label text="Low" />
+                                                <ListView fx:id="saturdayLowStockList" prefHeight="1071.0" prefWidth="217.0" />
+                                                <MenuButton fx:id="saturdayLowStockButton" mnemonicParsing="false" text="Add item" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="20.0" layoutY="20.0" prefHeight="1055.0" prefWidth="413.0">
+                                             <children>
+                                                <Label text="Out" />
+                                                <ListView fx:id="saturdayOutStockList" prefHeight="1054.0" prefWidth="218.0" />
+                                                <MenuButton fx:id="saturdayOutStockButton" mnemonicParsing="false" text="Add item" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="Who Read This Today">
+                                 <content>
+                                    <TextArea fx:id="wrttSaturday" prefHeight="200.0" prefWidth="200.0" />
+                                 </content>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="sundayTab" text="Sunday">
+                     <content>
+                        <Accordion>
+                           <panes>
+                              <TitledPane animated="false" text="Common Log">
+                                 <content>
+                                    <TextArea fx:id="commonLogSunday" prefHeight="318.0" prefWidth="296.0" />
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="Stock Log">
+                                 <content>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="1055.0" prefWidth="412.0">
+                                             <children>
+                                                <Label text="Low" />
+                                                <ListView fx:id="sundayLowStockList" prefHeight="1071.0" prefWidth="217.0" />
+                                                <MenuButton fx:id="sundayLowStockButton" mnemonicParsing="false" text="Add item" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="20.0" layoutY="20.0" prefHeight="1055.0" prefWidth="413.0">
+                                             <children>
+                                                <Label text="Out" />
+                                                <ListView fx:id="sundayOutStockList" prefHeight="1054.0" prefWidth="218.0" />
+                                                <MenuButton fx:id="sundayOutStockButton" mnemonicParsing="false" text="Add item" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="Who Read This Today">
+                                 <content>
+                                    <TextArea fx:id="wrttSunday" prefHeight="200.0" prefWidth="200.0" />
+                                 </content>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+            <Accordion>
+              <panes>
+                <TitledPane animated="false" text="Weekly Cleaning List">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <ListView fx:id="cleaningList" disable="true" focusTraversable="false" prefHeight="1098.0" prefWidth="436.0" />
+                              <HBox alignment="CENTER" prefHeight="30.0" prefWidth="436.0">
+                                 <children>
+                                    <TextField fx:id="newCleaningItemText" />
+                                    <Button fx:id="newCleaningItemButton" mnemonicParsing="false" onAction="#addCleaningItem" text="Add" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Important Changes This Week">
+                     <content>
+                        <TextArea fx:id="importantChangesLog" prefHeight="200.0" prefWidth="200.0" />
+                     </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Employee Roster Changes">
+                     <content>
+                        <TextArea fx:id="rosterChangesLog" prefHeight="200.0" prefWidth="200.0" />
+                     </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+         </items>
+      </SplitPane>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="menuNewFile" mnemonicParsing="false" onAction="#nextWeek" text="New week" />
+                  <MenuItem fx:id="menuOpen" mnemonicParsing="false" onAction="#open" text="Open" />
+                  <MenuItem fx:id="menuSave" mnemonicParsing="false" onAction="#save" text="Save" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Tools">
+              <items>
+                  <MenuItem fx:id="menuCompile" mnemonicParsing="false" onAction="#compileReport" text="Compile Week Report" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="14.0" prefWidth="920.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" text="Monday's Date:      " textAlignment="JUSTIFY" />
+            <DatePicker fx:id="datePicker" onAction="#setDate" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
