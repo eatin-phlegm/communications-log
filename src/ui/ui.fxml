@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.Controller">
+   <children>
+      <HBox>
+         <children>
+            <DatePicker fx:id="datePicker" />
+            <Button fx:id="todayButton" mnemonicParsing="false" text="Today" />
+            <Separator prefHeight="3.0" prefWidth="232.0" />
+            <Button fx:id="reportWasteButton" mnemonicParsing="false" text="Report Waste" />
+            <Button fx:id="requestTimeOffButton" mnemonicParsing="false" text="Request Time Off" />
+            <Button fx:id="compileWeekButton" mnemonicParsing="false" text="Compile Weekly Report" />
+         </children>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </VBox.margin>
+      </HBox>
+      <Accordion fx:id="accordionNode">
+        <panes>
+          <TitledPane animated="false" text="Log">
+               <content>
+                  <TextArea fx:id="logArea" prefHeight="500.0" prefWidth="600.0" />
+               </content>
+          </TitledPane>
+            <TitledPane animated="false" text="Stock">
+               <content>
+                  <SplitPane dividerPositions="0.5" prefHeight="500.0" prefWidth="600.0">
+                     <items>
+                        <VBox>
+                           <children>
+                              <Label text="Low:" />
+                              <TextArea fx:id="lowArea" prefHeight="500.0" />
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label text="Out:" />
+                              <TextArea fx:id="outArea" prefHeight="500.0" />
+                           </children>
+                        </VBox>
+                     </items>
+                  </SplitPane>
+               </content>
+            </TitledPane>
+          <TitledPane animated="false" text="Sign!">
+               <content>
+                  <TextArea fx:id="signArea" prefHeight="500.0" prefWidth="600.0" />
+               </content>
+          </TitledPane>
+            <TitledPane animated="false" text="Weekly Cleaning Goals">
+               <content>
+                  <VBox>
+                     <children>
+                        <TableView fx:id="cleaningTable" prefHeight="475.0" prefWidth="550.0">
+                          <columns>
+                              <TableColumn fx:id="cleaningTaskCol" prefWidth="692.0" resizable="false" text="Task" />
+                              <TableColumn fx:id="cleaningTaskCompleteCol" minWidth="0.0" prefWidth="85.0" resizable="false" text="Complete?" />
+                          </columns>
+                        </TableView>
+                        <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="600.0">
+                           <children>
+                              <Button fx:id="addTaskButton" mnemonicParsing="false" text="Add Task" />
+                              <Button fx:id="removeTaskButton" mnemonicParsing="false" text="Remove Selected Task" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+   </children>
+</VBox>
